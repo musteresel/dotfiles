@@ -1,0 +1,87 @@
+git config --global user.name "Daniel Oertwig"
+git config --global user.email Daniel.Oertwig@gmail.com
+git config --gloabl core.editor 
+git config --global core.editor 
+git config --global core.editor vim
+git config --global merge.tool vimdiff
+git config --list
+logout
+ls
+cd
+ls
+pwd
+ls -la
+vim
+ls -la
+mkdir dotfiles
+cd dotfiles/
+mkdir bash
+mkdir vim
+ls -la
+pwd
+mv ~/.bashrc bash/
+touch vim/vimrc
+cd vim/
+ls
+ls -l
+mkdir autoload
+mkdir bundle
+mkdir sessions
+mkdir undodir
+ls
+cd ..
+cd bash/
+ls
+mv .bashrc bashrc
+touch aliases
+touch profile
+touch logout
+ls -la
+cd ..
+mkdir x
+cd x/
+touch initrc
+touch session
+touch ressources
+cd ..
+find .
+cat ~/.xinitrc 
+cat ~/.xsession 
+cat ~/.bash_logout 
+cat ~/.bash_profile 
+mv ~/.bash_profile bash/profile 
+mv ~/.bash_logout bash/logout 
+ls -la ~
+cat ~/.viminfo 
+mv ~/.xinitrc x/initrc 
+mv ~/.xsession x/session 
+find .
+ln -s ~/dotfiles/bash/bashrc ~/.bashrc
+ln -s ~/dotfiles/bash/profile ~/.bash_profile
+ln -s ~/dotfiles/bash/logout ~/.bash_logout
+ln -s ~/dotfiles/bash/aliases ~/.bash_aliases
+ln -s ~/dotfiles/x/initrc ~/.xinitrc
+ln -s ~/dotfiles/x/session ~/.xsession
+mv x/ressources x/resources 
+ln -s ~/dotfiles/x/resources ~/.Xresources
+ls -la ~
+ln -s ~/dotfiles/vim/ ~/.vim
+ls -la ~
+ls -la ~/.vim
+ls -la ~/.vim/
+ln -s ~/dotfiles/vim/vimrc ~/.vimrc
+ls -la ~
+touch vim/viminfo
+rm ~/.viminfo 
+ln -s ~/dotfiles/vim/viminfo ~/.viminfo
+ls -la ~
+mkdir git
+touch gitconfig
+mv gitconfig git
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+git config --global user.name "Daniel Oertwig"
+ls
+ls git/
+cat git/gitconfig 
+logout
+exit

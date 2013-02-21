@@ -1,0 +1,7 @@
+[user]
+	name = Daniel Oertwig
+	email = Daniel.Oertwig@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
