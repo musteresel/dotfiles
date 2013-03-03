@@ -11,6 +11,4 @@
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule "x/solarized-xresources"]
-	path = x/solarized-xresources
-	url = git://github.com/solarized/xresources.git
+
