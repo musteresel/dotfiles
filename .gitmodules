@@ -15,3 +15,6 @@
 [submodule "x/solarized-xresources"]
 	path = x/solarized-xresources
 	url = git@github.com:DanielOertwig/solarized-xresources.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git

@@ -1,0 +1,11 @@
+
+xterm*faceName: Menlo:style=Regular:size=12
+
+
+
+URxvt.buffered: true
+URxvt.jumpScroll: true
+!URxvt.letterSpace: -1
+!URxvt.font: xft:menlo:size=12
+URxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
+
