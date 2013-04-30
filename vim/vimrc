@@ -1,17 +1,27 @@
+" Daniels vimrc
+" -----------------------------------------------------------------------------
+
+
+" pathogen is nice to handle plugins!
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
+
+
 syntax on
 filetype plugin indent on
+set number
 
 
-
-set background=light
-let g:solarized_termtrans=1
+" colors help a lot
 if $TERM == "linux"
-	let g:solarized_termcolors = 16
+	" i tried to use solarized colors in linux console ... but failed.
+	colorscheme default
 else
-	let g:solarized_termcolors = 256
+	" else it breaks in xterm
+	let g:solarized_termcolors=256
+	colorscheme solarized
 endif
-colorscheme solarized
+" more relaxing for the eyes
+set background=light
 
