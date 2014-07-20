@@ -18,4 +18,6 @@ xrdb -load ~/dotfiles/x/resources
 # Load solarized colors
 xrdb -merge ~/dotfiles/x/solarized-xresources/solarized
 
+setxkbmap de
+
 exec herbstluftwm
