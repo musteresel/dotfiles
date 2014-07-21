@@ -13,6 +13,17 @@ filetype plugin indent on
 set number
 
 
+set list
+"set listchars=tab:»-,trail:·,eol:¶
+set listchars=tab:»-,trail:·,extends:‹,precedes:›
+set showbreak=›-»
+set colorcolumn=80
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=4
+
 " colors help a lot
 if $TERM == "linux"
 	" i tried to use solarized colors in linux console ... but failed.
@@ -24,4 +35,7 @@ else
 endif
 " more relaxing for the eyes
 set background=light
+
+
+iab //L // ----------------------------------------------------------------------------
 
