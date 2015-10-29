@@ -5,5 +5,32 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+function battery
+{
+  if [ -e /sys/class/power_supply/BAT0/capacity ]
+  then
+    cat /sys/class/power_supply/BAT0/capacity
+  else
+    echo 'XX'
+  fi
+}
+
+function ac_present
+{
+  [ -e /sys/class/power_supply/AC0 ]
+}
+
+function only_if
+{
+  local test="$1"
+  local job="$2"
+  if "$1"
+  then
+    "$2"
+  fi
+}
+
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+alias presentation-terminal='xterm -fa Monospace -fs 15 -background white -foreground black'
+
+PS1='$(battery)% [\u@\h \W]\$ '
