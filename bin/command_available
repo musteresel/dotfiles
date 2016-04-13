@@ -1,0 +1,4 @@
+# Test if a command is available. This script is intended to
+# be called for its exit code, and thus performs output redirection
+# of both standard output and standard error output.
+command -v "$@" >/dev/null 2>&1
