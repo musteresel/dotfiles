@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+# Load Xresources
+xrdb -load ~/dotfiles/x/resources
+# Load solarized colors
+xrdb -merge ~/dotfiles/x/solarized-xresources/solarized
+# Load dzen2 (panel) settings
+xrdb -merge ~/dotfiles/x/dzen2.resources
+
+setxkbmap de
+
+
+
+
+function hc()
+{
+  herbstclient "$@"
+}
+function hck()
+{
+  hc keybind "$@"
+}
+
+hc emit_hook reload
+hc detect_monitors
+hc keyunbind --all
+mod=Super
+hck $mod-Control-q quit
+hck $mod-Shift-r reload
+hck Alt-F4 close
+hck $mod-t spawn xterm
+hck $mod-x spawn dmenu_run
+
+hck $mod-r remove
+hck $mod-space cycle_layout
+hck $mod-u split vertical 0.5
+hck $mod-o split horizontal 0.5
+hck $mod-s floating toggle
+hck $mod-f fullscreen toggle
+hck $mod-p pseudotile toggle
+
+tag_names=( {1..9} )
+tag_keys=( {1..9} 0 )
+
+hc rename default "${tag_names[0]}"
+for i in ${!tag_names[@]}
+do
+  hc add "${tag_names[$i]}"
+  key="${tag_keys[$i]}"
+  if ! [ -z "$key" ]
+  then
+    hck "$mod-$key" use "${tag_names[$i]}"
+    hck "$mod-Shift-$key" move "${tag_names[$i]}"
+  fi
+done
+
+step=0.05
+hck $mod-Control-h resize left +$step
+hck $mod-Control-j resize down +$step
+hck $mod-Control-k resize up +$step
+hck $mod-Control-l resize right +$step
+
+hc mousebind $mod-Button1 move
+hc mousebind $mod-Button2 resize
+hc mousebind $mod-Button3 zoom
+
+hc set focus_crosses_monitor_boundaries 1
+hc set auto_detect_monitors 1
+hc set swap_monitors_to_get_tag 1 # Tag stealing between monitors enabled
+
+hck $mod-BackSpace cycle_monitor
+hck $mod-Shift-BackSpace shift_to_monitor +1
+hck $mod-Tab cycle_all +1
+hck $mod-Shift-Tab cycle_all -1
+hck $mod-c cycle
+hck $mod-h focus left
+hck $mod-j focus down
+hck $mod-k focus up
+hck $mod-l focus right
+
+hck $mod-Shift-h shift left
+hck $mod-Shift-j shift down
+hck $mod-Shift-k shift up
+hck $mod-Shift-l shift right
+
+hc unrule -F
+hc rule focus=off
+hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
+
+sh $HOME/.config/herbstluftwm/panel.sh
