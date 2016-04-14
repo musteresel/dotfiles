@@ -1,0 +1,17 @@
+set completion-ignore-case on # ignore case on TAB completion
+set show-all-if-ambiguous on
+set mark-symlinked-directories on # Adds a trailing slash
+set visible-stats on # like ls -F
+set skip-completed-text on # moz|il --> mozilla (not mozillail)
+set match-hidden-files off # Match hidden files only with explicit .
+set page-completions off # Show all at once
+set completion-query-items 40 # Ask if more than 40
+
+# UTF-8 related
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Use already typed text as prefix to search through history
+"\e[B": history-search-forward
+"\e[A": history-search-backward
