@@ -1,0 +1,4 @@
+xterm*faceName: Source Code Pro:pixelsize=14:antialias=true:hinting=slight
+xterm*selectToClipboard: true
+xterm*metaSendsEscape: true
+xterm*saveLines: 8192
