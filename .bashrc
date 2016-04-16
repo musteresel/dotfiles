@@ -15,5 +15,5 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias dotfiles='git --git-dir=~/.dotfiles.git --work-tree=~'
+alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 complete -o default -o nospace -F _git dotfiles # Inherit git completion
