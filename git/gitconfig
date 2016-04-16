@@ -2,7 +2,7 @@
 	name = Daniel Jour
 	email = Daniel.Oertwig@gmail.com
 [core]
-	editor = vim
+	editor = emacsclient
 [merge]
 	tool = vimdiff
 [push]

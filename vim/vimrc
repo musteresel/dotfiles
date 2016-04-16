@@ -1,6 +1,7 @@
 " Daniels vimrc
 " -----------------------------------------------------------------------------
 
+set backspace=2
 
 " pathogen is nice to handle plugins!
 runtime bundle/vim-pathogen/autoload/pathogen.vim

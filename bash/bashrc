@@ -33,4 +33,9 @@ function only_if
 alias ls='ls --color=auto'
 alias presentation-terminal='xterm -fa Monospace -fs 15 -background white -foreground black'
 
+alias emt='emacsclient -nc -a ""'
+alias emc='emacsclient -t -a ""'
+EDITOR='emacsclient -a ""'
+
+
 PS1='$(battery)% [\u@\h \W]\$ '
